@@ -1,0 +1,52 @@
+.header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 6.4rem;
+  /* border: 1px solid #123; */
+  z-index: 1;
+}
+.header__container {
+  height: 100%;
+  width: 100%;
+  padding: 2rem;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header__contacto,
+.header__contacto-llamada {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.header__contacto-text {
+  display: none;
+  font-size: 1.2rem;
+  margin-right: 1rem;
+}
+.header__contacto-llamada p {
+  font-size: 1.4rem;
+  color: var(--blue);
+  font-weight: 400;
+}
+.contacto__celular{
+    display:none;
+}
+
+
+
+
+/* **************************************** */
+/* MEDIAS QUERY */
+/* **************************************** */
+
+@media screen and (min-width: 768px) {
+  .header__contacto-text {
+    display: inherit;
+    font-size: 1.2rem;
+  }
+}

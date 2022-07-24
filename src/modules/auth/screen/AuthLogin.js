@@ -6,7 +6,7 @@ import AuthLoginForm from '../components/AuthLoginForm'
 const AuthLogin = () => {
 
     const [spinner, setSpinner] = useState(false)
-    useTitle({title: 'Inicia Sesión | RIMAC'})
+    useTitle({ title: 'Inicia Sesión | RIMAC' })
 
     return (
         <>
@@ -20,8 +20,6 @@ const AuthLogin = () => {
                     </div>
                 </div>
             </main>
-
-
         </>
     )
 }
