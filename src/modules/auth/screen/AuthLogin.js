@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import SpinnerCuadrado from '../../helpers/SpinnerCuadrado'
 import useTitle from '../../hooks/useTitle'
 import AuthLoginForm from '../components/AuthLoginForm'
+import '../styles/auth.css'
 
 const AuthLogin = () => {
 
@@ -14,11 +15,7 @@ const AuthLogin = () => {
                 spinner && <SpinnerCuadrado />
             }
             <main className="login">
-                <div className="login__card">
-                    <div className="login__form">
-                        <AuthLoginForm setSpinner={setSpinner} />
-                    </div>
-                </div>
+                <AuthLoginForm setSpinner={setSpinner} />
             </main>
         </>
     )

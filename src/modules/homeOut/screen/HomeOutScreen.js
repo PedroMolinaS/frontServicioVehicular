@@ -1,6 +1,6 @@
 import React from 'react'
 import AuthLogin from '../../auth/screen/AuthLogin'
-import '../style/homeOut.css'
+import '../styles/homeOut.css'
 
 const HomeOutScreen = () => {
     return (
