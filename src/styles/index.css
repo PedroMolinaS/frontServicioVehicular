@@ -1,4 +1,3 @@
-/* @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;900&display=swap"); */
 @import url("https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Roboto:wght@300;400;700&display=swap");
 
 :root {
@@ -28,6 +27,13 @@ html {
   font-size: 10px;
   font-family: "Roboto", sans-serif;
   /* font-family: "Lato", sans-serif; */
+}
+
+.mobile{
+  display: inherit !important;
+}
+.desktop{
+  display: none !important;
 }
 
 /* *************************************** */
@@ -148,7 +154,7 @@ html {
   height: 30px;
   border-radius: 50%;
   border-left-color: #fff;
-
+  
   animation: spinCircular 1s ease infinite;
 }
 
@@ -156,8 +162,25 @@ html {
   0% {
     transform: rotate(0deg);
   }
-
+  
   100% {
     transform: rotate(360deg);
   }
 }
+
+/* *************************************** */
+/* MEDIA QUERYS */
+/* *************************************** */
+
+@media screen and (min-width: 768px){
+
+  .mobile{
+    display: none !important;
+  }
+  .desktop{
+    display: inherit !important;
+  }
+
+
+}
+

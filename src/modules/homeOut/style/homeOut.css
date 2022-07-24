@@ -1,5 +1,10 @@
 /* SECCION CONTAINER PRESENTACION */
 
+.homeout__container {
+  display: flex;
+  flex-direction: column;
+}
+
 .container__presentacion {
   background-color: var(--layout_light);
   display: flex;
@@ -8,7 +13,7 @@
   border: 1px solid #123;
 }
 
-.presentacion__textos p {
+.presentacion__textos p:nth-child(1) {
   font-family: "Lato", sans-serif;
   font-weight: 700;
 }
@@ -45,9 +50,70 @@ h3 {
 .container__formulario {
   padding: 1rem 2rem;
 }
-.formulario__title{
-    font-family: 'Lato', sans-serif;
-    font-size: 2.4rem;
-    color: var(--text);
-    margin-bottom: 2rem;
+.formulario__title {
+  font-family: "Lato", sans-serif;
+  font-size: 2.4rem;
+  color: var(--text);
+  margin-bottom: 2rem;
+}
+
+/* *************************************** */
+/* MEDIA QUERYS */
+/* *************************************** */
+
+@media screen and (min-width: 768px) {
+  .homeout__container {
+    display: flex;
+    flex-direction: row;
+    height: 100vh;
+  }
+
+  .container__presentacion {
+    flex: 4;
+    flex-direction: column-reverse;
+    justify-content: center;
+    background-image: url('../../../assets/img/homeOut/img_fondo.svg'); 
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+    padding: 0;
+    gap: 2rem;
+    position: relative;
+  }
+
+  .presentacion__imagenes {
+    width: 60%;
+    margin: 0 auto;
+  }
+
+  .container__formulario {
+    flex: 6;
+  }
+
+  .presentacion__textos{
+    width: 60%;
+    margin: 0 auto;
+  }
+
+  h1, .presentacion__remarcado{
+    font-family: "Lato", sans-serif;
+    font-weight: 400;
+    font-size: 3.6rem;
+  }
+  h1 span{
+    color: var(--red);
+  }
+  .presentacion__textos p:nth-child(1) {
+    font-size: 1.2rem;
+  }
+
+  .footer{
+    position: absolute;
+    bottom: 5rem;
+    left: 10rem;
+    font-size: 1.2rem;
+  }
+
+
 }
