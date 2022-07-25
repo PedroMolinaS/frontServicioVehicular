@@ -1,0 +1,28 @@
+.homein__container {
+  margin-top: 6.4rem;
+  display: flex;
+  flex-direction: column;
+}
+.container__producto {
+    /* background-color: var(--layout_light); */
+    /* padding-bottom: 4rem; */
+  }
+/* ***************************************** */
+/* RESPONSIVE */
+/* ***************************************** */
+
+@media screen and (min-width: 768px) {
+  .homein__container {
+    flex-direction: row;
+  }
+  .container__flujo {
+    border-top: 1px solid var(--borde);
+    background-color: var(--layout_light);
+    height: calc(100vh - 6.4rem);
+    flex: 2;
+  }
+  .container__producto {
+    border-top: 1px solid var(--borde);
+    flex: 6;
+  }
+}

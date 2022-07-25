@@ -8,12 +8,16 @@
   --text_light: #a3abcc;
   --text_neutral: #A9AFD9;
   --text_pregunta: #676F8F;
+  --borde:#E4E8F7;
   --grey: #c5cbe0;
+  --grey_light: #F0F2FA;
   --green: #389E0D;
   --blue: #6769FF;
   --layout_light: #f7f8fc;
   --layout_neutral: #ECF0FF;
-
+  --flujo: #C5CBE0;
+  --text_flujo: #A3ABCC;
+  --btn: #939DFF;
 }
 
 * {
@@ -43,9 +47,9 @@ html {
 .robot {
   margin: 0.5rem 0rem;
   padding: 0.5rem;
-  background-color: var(--rojo);
-  border-radius: 0.5rem;
-  color: #eee;
+  color: var(--red);
+  font-size: 1.4rem;
+  font-weight: 900;
   text-align: center;
 }
 

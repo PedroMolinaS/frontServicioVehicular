@@ -1,4 +1,5 @@
 import React, { useEffect, useReducer } from 'react'
+import { parseJwt } from '../../modules/helpers/leeJWT'
 // import { getUser } from '../../services/auth'
 import AuthContext from './authContext'
 import AuthReducer from './authReducer'
@@ -8,8 +9,9 @@ const AuthState = (props) => {
     const [state, dispatch] = useReducer(AuthReducer, {
         globalUser: {
             userName: '',
-            email: ''
+            document: '',
         },
+        globalPlaca: '',
         globalToken: '',
         globalNavigate: '',
         globalAuthenticate: true
@@ -19,24 +21,17 @@ const AuthState = (props) => {
     // Zona de funciones:
     // *************************************
 
-    const globalIniciarSesion = (token, usuario) => {
+    const globalIniciarSesion = (token) => {
 
         // Guardados token en caso de actualizar la web
         localStorage.setItem('token', token)
 
+        let data = parseJwt(token)
+
         dispatch({
             action: 'INICIAR_SESION',
-            data: { token, usuario }
+            data: { token, data  }
         })
-    }
-
-    const globalActivaSesion = (token) => {
-        // getUser(token).then(res => {
-        //     dispatch({
-        //         action: 'INICIAR_SESION',
-        //         data: { token, usuario: res.usuario }
-        //     })
-        // })
     }
 
     const globalCerrarSesion = () => {
@@ -54,18 +49,19 @@ const AuthState = (props) => {
     // Zona de Precarga:
     // *************************************
 
-    // useEffect(() => {
+    useEffect(() => {
 
-        // const tok = localStorage.getItem('token')
-        // if (tok) globalActivaSesion(tok)
+        const tok = localStorage.getItem('token')
+        if (tok) globalIniciarSesion(tok)
 
-    // }, [])
+    }, [])
 
 
 
     return (
         <AuthContext.Provider value={{
             globalUser: state.globalUser,
+            globalPlaca: state.globalPlaca,
             globalToken: state.globalToken,
             globalAuthenticate: state.globalAuthenticate,
             globalIniciarSesion,

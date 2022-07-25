@@ -1,0 +1,73 @@
+/* ***************************************** */
+/* ZONA DE FLUJO A TRAZA */
+/* ***************************************** */
+
+.flujo__status {
+  border: 1px solid var(--borde);
+  padding: 1rem 3rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.flulo__volver {
+  border-radius: 50%;
+  border: 1px solid var(--borde);
+  color: var(--borde);
+  padding: 0rem 0.3rem;
+  cursor: pointer;
+  width: 3rem;
+  text-align: center;
+  font-size: 2rem;
+}
+
+.flulo__avance {
+  flex: 1;
+  height: 0.8rem;
+  background-color: var(--blue);
+  border-radius: 0.5rem;
+}
+
+/* ***************************************** */
+/* RESPONSIVE */
+/* ***************************************** */
+
+@media screen and (min-width: 768px) {
+  .flujo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 5rem;
+  }
+  .flujo__datos {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+  }
+
+  .flujo__dato-item {
+    border-radius: 50%;
+    border: 1px solid var(--flujo);
+    color: var(--flujo);
+    padding: 0.5rem 1rem;
+    font-size: 1.2rem;
+  }
+  .flujo__dato-text {
+    color: var(--text_flujo);
+    font-size: 1.6rem;
+  }
+  .flujo__separador {
+    height: 4rem;
+    width: 0.5rem;
+    border-right: 3px dashed var(--grey);
+    padding-left: 1.2rem;
+  }
+
+  .flujo__dato-item.actual {
+    background-color: var(--blue);
+    color: #fff;
+  }
+  .flujo__dato-text.actual {
+    color: var(--text);
+  }
+}
