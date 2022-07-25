@@ -13,8 +13,8 @@ const HomeOutScreen = () => {
                     <h3>Cuentanos donde le haras seguimiento a tu seguro</h3>
                 </div>
                 <div className='presentacion__imagenes'>
-                    <img  src="/assets/img/img_principalmobile.png" alt="img principal mobile" />
-                    <img className='desktop' src="/assets/img/img_principal.png" alt="img principal" />
+                    <img  src="/assets/img/img_principalmobile.svg" alt="img principal mobile" />
+                    <img className='desktop' src="/assets/img/img_principal.svg" alt="img principal" />
                 </div>
                 <div className='footer desktop'>© 2021 RIMAC Seguros y Reaseguros.</div>
             </section>
