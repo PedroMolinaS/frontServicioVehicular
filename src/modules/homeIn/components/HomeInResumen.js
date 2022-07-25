@@ -1,10 +1,16 @@
 import React, { useContext } from 'react'
 import AuthContext from '../../../context/auth/authContext'
 import '../styles/homeInResumen.css'
+import {useNavigate} from 'react-router-dom'
 
 const HomeInResumen = () => {
 
     const {globalSeguro} = useContext(AuthContext)
+    const navigate = useNavigate()
+
+    const gotoBienvenida = () => {
+        navigate('/evaluacion/bienvenida')
+    }
 
     return (
         <div className="producto__resumen">
@@ -23,7 +29,7 @@ const HomeInResumen = () => {
                         <li><i className="fa-solid fa-check"></i> Aros gratis</li>
                     </ul>
                 </div>
-                <button className='monto__confirmacion'>LO QUIERO</button>
+                <button className='monto__confirmacion' onClick={gotoBienvenida}>LO QUIERO</button>
             </div>
         </div>
     )
