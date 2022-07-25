@@ -1,4 +1,3 @@
-
 .producto{
     background-color: var(--layout_light);
 }
@@ -8,6 +7,16 @@
 .producto__datacliente{
     padding-top: 3rem;
 }
+
+.datacliente__usuario{
+    font-size:4rem;
+    font-family: 'Lato',sans-serif;
+}
+.datacliente__usuario span{
+    color: var(--red);
+
+}
+
 .datacliente__bienvenida{
     font-size: 2.8rem;
     font-family: 'Lato', sans-serif;
@@ -67,14 +76,16 @@
     margin-top: 3rem;
     font-family: 'Lato', sans-serif;
 }
-.seguro__textos > p:nth-child(1){
+.seguro__textos > p{
     font-size: 1.6rem;
     color: var(--text);
 }
-.seguro__textos > p:nth-child(2){
+.seguro__textos > div{
     margin-top: 1rem;
     font-size: 1.4rem;
     color: var(--text_pregunta);
+    display: flex;
+    gap: 1rem;
 }
 
 .seguro__operaciones{
@@ -83,18 +94,190 @@
     display: flex;
     justify-content:space-between;
     align-items:center;
-    padding: 1rem;
+    padding: .3rem;
     font-family: 'Lato', sans-serif;
     font-size: 1.6rem;
     font-weight: 400;
+    
 }
 .operacines__btn{
     color: var(--btn);
-    font-size: 2.4rem;
+    font-size: 2.6rem;
+    padding: .5rem 1.5rem;
+    cursor: pointer;
+}
+.seguro__separador{
+    margin-top: 2rem;
+    border-bottom: 1px solid var(--grey);
 }
 
 
+/* *********************************************** */
+/* ZONA COBERTURAS */
+/* *********************************************** */
+.producto__coberturas{
+    background-color:#fff;
+}
+.producto__coberturas h2{
+    padding: 4rem 3rem 2rem;
+    font-size: 2rem;
+    font-family: 'Lato',sans-serif;
+    font-weight: 400;
+}
+.coberturas__secciones{
+    display: flex;
+    border-bottom: 1px solid var(--grey);
+}
+.coberturas__secciones h3{
+    font-size: 1rem;
+    font-family: 'Lato',sans-serif;
+    font-weight: 700;
 
+    min-width: 11rem;
+    padding: 2rem 1.4rem;
+    text-align: center;
+}
+.coberturas__secciones .selected{
+    color: var(--red);
+    border-bottom: 2px solid var(--red);
+}
+
+.card__cobertura{
+    padding: 3rem;
+    display: flex;
+
+}
+.card__cobertura-body{
+    padding-left: 2rem;
+    padding-bottom: 2rem;
+    width: 100%;
+    border-bottom: 1px solid var(--grey);
+}
+.cobertura__title{
+    display: flex;
+    justify-content:space-between;
+    align-items:center;
+}
+.cobertura__title > p{
+    font-size: 1.6rem;
+    font-family: 'Lato',sans-serif;
+    font-weight: 400;
+}
+.oculto{
+    display:none;
+}
+.cobertura__detalle{
+    margin-top: 1.5rem;
+}
+
+.detalle__vermas,
+.detalle__vermenos{
+    color: var(--blue);
+    font-weight: 700;
+    margin: 1rem 0;
+    font-size: 1rem;
+}
+.detalle__vermenos{
+    color: var(--text_neutral);
+}
+.detalle__vermas span,
+.detalle__vermenos span{
+    margin-left: .5rem;
+}
+.cobertura__detalle > p{
+    font-size: 1.4rem;
+    font-weight: 400;
+    line-height: 2.4rem;
+}
+
+.detalle__accion{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    cursor: pointer;
+}
+.detalle__accion-btn{
+    border-radius: 50%;
+    border: 1px solid var(--blue);
+    color: var(--blue);
+    padding: .2rem .5rem;
+    font-size: 2rem;
+    width: 3rem;
+    text-align: center;
+}
+.detalle__accion-text{
+    font-size: 1.2rem;
+    font-weight: 700;
+    font-family: 'Lato',sans-serif;
+    color: var(--blue);
+}
+
+@media screen and (min-width: 768px){
+    
+    .producto{
+        flex: 1;
+        padding: 2rem 5rem;
+    }
+    .producto__resumen{
+        flex: 1;
+        padding: 2rem 5rem;
+    }
+
+    .producto__volver{
+        display:flex;
+        align-items:center;
+        gap: 1rem;
+        padding: 3rem 3rem 0 3rem;
+    }
+    .volver__icono{
+        border-radius: 50%;
+        border: 1px solid var(--red);
+        color: var(--red);
+        font-size: 1.6rem;
+        padding: .5rem 1rem;
+        cursor: pointer;
+    }
+    .volver__text{
+        font-family: 'Lato',sans-serif;
+        font-size: 1.2rem;
+        color: var(--text_neutral);
+        cursor: pointer;
+    }
+
+    .producto{
+        background-color: #fff;
+    }
+
+    .producto__seguro{
+        flex-direction: row;
+        justify-content: space-between;
+        align-items:center;
+    }
+    .seguro__textos{
+        margin: auto 0;
+    }
+
+    .seguro__textos > div{
+        font-size: 1.2rem;
+    }
+    .coberturas__secciones h3{
+        font-size: 1rem;
+        font-family: 'Lato',sans-serif;
+        font-weight: 700;
+    
+        min-width: 11rem;
+        padding: 2rem 4.5rem;
+        text-align: center;
+        cursor: pointer;
+    }
+    .coberturas__secciones h3:hover{
+        background-color: var(--red_dark);
+        color: #fff;
+    }
+
+    
+
+}
 
 
 
