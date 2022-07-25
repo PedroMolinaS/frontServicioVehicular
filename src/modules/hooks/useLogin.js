@@ -41,8 +41,9 @@ const useLogin = () => {
     const handleLoginSubmit = (e) => {
         e.preventDefault()
         const { document, cell, placa, aprobacion } = form
+        // console.log({errors})
 
-        if (!document || !cell || !placa || !aprobacion) {
+        if (!document || !cell || !placa || !aprobacion || errors.document || errors.cell || errors.placa || errors.aprobacion) {
             Swal.fire({
                 icon: 'error',
                 title: 'Completar todos los campos',
@@ -52,7 +53,7 @@ const useLogin = () => {
             return
         }
 
-        console.log('correcto')
+        // console.log('correcto')
         setCargando(true)
         postLogin({dni: form.document}).then(rpta => {
             setCargando(false)

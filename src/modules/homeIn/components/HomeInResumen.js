@@ -15,9 +15,9 @@ const HomeInResumen = () => {
                 <div className="resumen__monto-indicaciones desktop">
                     <div>El precio incluye:</div>
                     <ul>
-                        <li><i class="fa-solid fa-check"></i> Llanta de respuesto</li>
-                        <li><i class="fa-solid fa-check"></i> Analisis de motor</li>
-                        <li><i class="fa-solid fa-check"></i> Aros gratis</li>
+                        <li><i className="fa-solid fa-check"></i> Llanta de respuesto</li>
+                        <li><i className="fa-solid fa-check"></i> Analisis de motor</li>
+                        <li><i className="fa-solid fa-check"></i> Aros gratis</li>
                     </ul>
                 </div>
                 <button className='monto__confirmacion'>LO QUIERO</button>
