@@ -23,6 +23,10 @@
     font-weight: 700;
     cursor: pointer;
 }
+.monto__confirmacion:hover{
+    background-color: var(--red_dark);
+}
+
 
 @media screen and (min-width: 768px){
 
