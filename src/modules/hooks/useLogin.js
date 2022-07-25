@@ -57,8 +57,9 @@ const useLogin = () => {
         setCargando(true)
         postLogin({dni: form.document}).then(rpta => {
             setCargando(false)
+            // console.log({rpta})
             if(rpta.ok){
-                globalIniciarSesion(rpta.token)
+                globalIniciarSesion(rpta)
                 navigate('/evaluacion')
                 return
             }

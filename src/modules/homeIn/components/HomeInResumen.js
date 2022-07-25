@@ -1,13 +1,16 @@
-import React from 'react'
+import React, { useContext } from 'react'
+import AuthContext from '../../../context/auth/authContext'
 import '../styles/homeInResumen.css'
 
-
 const HomeInResumen = () => {
+
+    const {globalSeguro} = useContext(AuthContext)
+
     return (
         <div className="producto__resumen">
             <div className="resumen__monto">
                 <p className='monto__title desktop'>Monto</p>
-                <p className='monto__valor'>$ 35.00</p>
+                <p className='monto__valor'>$ {globalSeguro.base+globalSeguro.llanta+globalSeguro.choque+globalSeguro.atropello}.00</p>
                 <p className='monto__texto'>mensuales</p>
             </div>
 

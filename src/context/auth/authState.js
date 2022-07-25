@@ -1,6 +1,5 @@
 import React, { useEffect, useReducer } from 'react'
-import { parseJwt } from '../../modules/helpers/leeJWT'
-// import { getUser } from '../../services/auth'
+import { dataSeguro } from '../../modules/helpers/data'
 import AuthContext from './authContext'
 import AuthReducer from './authReducer'
 
@@ -14,33 +13,53 @@ const AuthState = (props) => {
         globalPlaca: '',
         globalToken: '',
         globalNavigate: '',
-        globalAuthenticate: true
+        globalAuthenticate: true,
+        globalSeguro: dataSeguro
     })
 
     // *************************************
     // Zona de funciones:
     // *************************************
 
-    const globalIniciarSesion = (token) => {
+    const globalIniciarSesion = (rpta) => {
 
         // Guardados token en caso de actualizar la web
-        localStorage.setItem('token', token)
-
-        let data = parseJwt(token)
+        localStorage.setItem('nombre', rpta.customer.nombre)
+        localStorage.setItem('placa', rpta.customer.placa)
+        localStorage.setItem('token', rpta.token)
 
         dispatch({
             action: 'INICIAR_SESION',
-            data: { token, data  }
+            data: rpta
         })
+
     }
+
+    const globalIniciarPostSesion = (nombre, placa, token) => {
+
+        dispatch({
+            action: 'INICIAR_POST_SESION',
+            data: {nombre, placa, token}
+        })
+
+    }
+
 
     const globalCerrarSesion = () => {
 
         // Guardados token en caso de actualizar la web
-        localStorage.removeItem('token')
+        localStorage.removeItem('nombre')
+        localStorage.removeItem('placa')
 
         dispatch({
             action: 'CERRAR_SESION'
+        })
+    }
+
+    const globalActualizaSeguro = (data) => {
+        dispatch({
+            action: 'ACTUALIZA_SEGURO',
+            data: data
         })
     }
 
@@ -51,8 +70,10 @@ const AuthState = (props) => {
 
     useEffect(() => {
 
+        const nom = localStorage.getItem('nombre')
+        const plac = localStorage.getItem('placa')
         const tok = localStorage.getItem('token')
-        if (tok) globalIniciarSesion(tok)
+        if (nom && plac) globalIniciarPostSesion(nom, plac, tok)
 
     }, [])
 
@@ -64,8 +85,10 @@ const AuthState = (props) => {
             globalPlaca: state.globalPlaca,
             globalToken: state.globalToken,
             globalAuthenticate: state.globalAuthenticate,
+            globalSeguro: state.globalSeguro,
             globalIniciarSesion,
-            globalCerrarSesion
+            globalCerrarSesion,
+            globalActualizaSeguro
         }}>
             {props.children}
         </AuthContext.Provider>

@@ -6,11 +6,27 @@ const AuthReducer = (state, payload) => {
                 ...state,
                 globalAuthenticate: true,
                 globalUser: {
+                    useName: payload.data.customer.nombre,
+                    document: payload.data.customer.dni
+                },
+                globalPlaca: payload.data.customer.placa,
+                globalToken: payload.data.token
+            }
+        case 'INICIAR_POST_SESION':
+            return {
+                ...state,
+                globalAuthenticate: true,
+                globalUser: {
                     useName: payload.data.nombre,
-                    document: payload.data.dni
+                    document: ''
                 },
                 globalPlaca: payload.data.placa,
                 globalToken: payload.data.token
+            }
+        case 'ACTUALIZA_SEGURO':
+            return {
+                ...state,
+                globalSeguro: payload.data
             }
         case 'CERRAR_SESION':
             return {
