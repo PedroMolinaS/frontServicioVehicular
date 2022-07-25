@@ -8,7 +8,7 @@ const HomeOutScreen = () => {
             <section className="container__presentacion">
                 <div className="presentacion__textos">
                     <p>¡Nuevo!</p>
-                    <h1>Seguro <span>Vehicular</span></h1>
+                    <h1>Seguro <span>Vehicular </span></h1>
                     <p className='presentacion__remarcado'>Tracking</p>
                     <h3>Cuentanos donde le haras seguimiento a tu seguro</h3>
                 </div>
