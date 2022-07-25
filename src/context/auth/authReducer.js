@@ -6,11 +6,11 @@ const AuthReducer = (state, payload) => {
                 ...state,
                 globalAuthenticate: true,
                 globalUser: {
-                    useName: payload.data.customer.nombre,
-                    document: payload.data.customer.dni
+                    useName: payload.data.rpta.customer.nombre,
+                    document: payload.data.rpta.customer.dni
                 },
-                globalPlaca: payload.data.customer.placa,
-                globalToken: payload.data.token
+                globalPlaca: payload.data.placa,
+                globalToken: payload.data.rpta.token
             }
         case 'INICIAR_POST_SESION':
             return {

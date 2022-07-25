@@ -21,16 +21,16 @@ const AuthState = (props) => {
     // Zona de funciones:
     // *************************************
 
-    const globalIniciarSesion = (rpta) => {
+    const globalIniciarSesion = (rpta, placa) => {
 
         // Guardados token en caso de actualizar la web
         localStorage.setItem('nombre', rpta.customer.nombre)
-        localStorage.setItem('placa', rpta.customer.placa)
+        localStorage.setItem('placa', placa)
         localStorage.setItem('token', rpta.token)
 
         dispatch({
             action: 'INICIAR_SESION',
-            data: rpta
+            data: {rpta, placa}
         })
 
     }

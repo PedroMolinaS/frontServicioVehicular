@@ -6,7 +6,6 @@ import RutaPrivada from '../modules/helpers/RutaPrivada'
 import RouterHomeIn from './RouterHomeIn'
 
 const HomeOutScreen = React.lazy(()=> import('../modules/homeOut/screen/HomeOutScreen'))
-// const RouterHomeIn = React.lazy(()=> import('../modules/homeIn/screen/HomeInScreen'))
 
 const RouterMain = () => {
     return (

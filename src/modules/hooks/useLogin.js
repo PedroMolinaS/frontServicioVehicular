@@ -41,7 +41,6 @@ const useLogin = () => {
     const handleLoginSubmit = (e) => {
         e.preventDefault()
         const { document, cell, placa, aprobacion } = form
-        // console.log({errors})
 
         if (!document || !cell || !placa || !aprobacion || errors.document || errors.cell || errors.placa || errors.aprobacion) {
             Swal.fire({
@@ -53,13 +52,11 @@ const useLogin = () => {
             return
         }
 
-        // console.log('correcto')
         setCargando(true)
         postLogin({dni: form.document}).then(rpta => {
             setCargando(false)
-            // console.log({rpta})
             if(rpta.ok){
-                globalIniciarSesion(rpta)
+                globalIniciarSesion(rpta, placa)
                 navigate('/evaluacion')
                 return
             }
