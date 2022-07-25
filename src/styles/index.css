@@ -3,9 +3,11 @@
 :root {
   /* Colores oficiales */
   --red: #ff1c44;
+  --red_dark: #c60d2f;
   --text: #494f66;
   --text_light: #a3abcc;
   --text_neutral: #A9AFD9;
+  --text_pregunta: #676F8F;
   --grey: #c5cbe0;
   --green: #389E0D;
   --blue: #6769FF;

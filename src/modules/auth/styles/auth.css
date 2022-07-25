@@ -24,7 +24,6 @@
     font-size: 1.6rem;
 }
 .login__group input[type="checkbox"] {
-    width:2.5rem;
     margin-right: 1rem;
     appearance: none;
     height:2rem;
@@ -68,6 +67,14 @@
     text-decoration: underline;
 }
 
+.login__error{
+    color: var(--red);
+    /* margin-top: -1rem; */
+    margin-bottom: 1rem;
+    font-weight: 900;
+    font-size: 1.2rem;
+}
+
 .login__btn{
     width: 100%;
     padding: 1.5rem;
@@ -77,5 +84,19 @@
     color: #fff;
     font-weight: 700;
     font-size: 1.4rem;
-    margin-top: 1rem
+    margin-top: 1rem;
+    cursor: pointer;
+}
+.login__btn:hover{
+    background-color:var(--red_dark);
+}
+
+@media screen and (min-width: 768px) {
+    
+    .login__container {
+        max-width: 29rem;
+
+      }
+    
+
 }

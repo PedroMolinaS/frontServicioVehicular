@@ -20,8 +20,10 @@ const HomeOutScreen = () => {
             </section>
 
             <section className="container__formulario">
-                <div className="formulario__title">Déjanos tus datos</div>
-                <AuthLogin />
+                <div>
+                    <div className="formulario__title">Déjanos tus datos</div>
+                    <AuthLogin />
+                </div>
             </section>
 
         </div>

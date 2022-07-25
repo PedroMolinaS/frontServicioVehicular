@@ -10,7 +10,7 @@
 .header__container {
   height: 100%;
   width: 100%;
-  padding: 2rem;
+  padding: 2rem 3rem;
   margin: 0 auto;
   display: flex;
   justify-content: space-between;
@@ -33,25 +33,22 @@
   color: var(--blue);
   font-weight: 400;
 }
-.contacto__celular{
-    display:none;
-}
-
-
-
+/* .contacto__celular {
+  display: none;
+} */
 
 /* **************************************** */
 /* MEDIAS QUERY */
 /* **************************************** */
 
 @media screen and (min-width: 768px) {
-
-    .header__container {
-        padding-right: 10rem;
-        padding-left: 10rem;
-      }
-    .header__contacto-text {
+  .header__container {
+    padding-right: 10rem;
+    padding-left: 10rem;
+  }
+  .header__contacto-text {
     display: inherit;
     font-size: 1.2rem;
+    color: var(--text_pregunta);
   }
 }
