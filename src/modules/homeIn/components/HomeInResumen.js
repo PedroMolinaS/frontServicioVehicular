@@ -2,6 +2,7 @@ import React, { useContext } from 'react'
 import AuthContext from '../../../context/auth/authContext'
 import '../styles/homeInResumen.css'
 import {useNavigate} from 'react-router-dom'
+import { formateaMoneda } from '../../helpers/formateaMoneda'
 
 const HomeInResumen = () => {
 
@@ -16,7 +17,7 @@ const HomeInResumen = () => {
         <div className="producto__resumen">
             <div className="resumen__monto">
                 <p className='monto__title desktop'>Monto</p>
-                <p className='monto__valor'>$ {globalSeguro.base+globalSeguro.llanta+globalSeguro.choque+globalSeguro.atropello}.00</p>
+                <p className='monto__valor'>{formateaMoneda(globalSeguro.base+globalSeguro.llanta+globalSeguro.choque+globalSeguro.atropello)}</p>
                 <p className='monto__texto'>mensuales</p>
             </div>
 

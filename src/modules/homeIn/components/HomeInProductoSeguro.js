@@ -1,5 +1,6 @@
 import React, { useContext, useState } from 'react'
 import AuthContext from '../../../context/auth/authContext'
+import { formateaMonedaSinDecimal } from '../../helpers/formateaMoneda'
 import HomeInProductoCovertura from './HomeInProductoCovertura'
 
 const dataPrecios = { min: 12500, max: 16500, limite: 16000, llanta: 15, choque: 20, atropello: 50 }
@@ -45,11 +46,11 @@ const HomeInProductoSeguro = () => {
 
                 <div className="seguro__textos">
                     <p>Indicar la suma asegurada</p>
-                    <div>MIN ${dataPrecios.min}<p>|</p>MIN ${dataPrecios.max}</div>
+                    <div>MIN {formateaMonedaSinDecimal(dataPrecios.min)}<p>|</p>MIN {formateaMonedaSinDecimal(dataPrecios.max)}</div>
                 </div>
                 <div className="seguro__operaciones">
                     <div className='operacines__btn' onClick={() => modificarSeguro(false)}>-</div>
-                    <div>$ {coverturaMonto}</div>
+                    <div>{formateaMonedaSinDecimal(coverturaMonto)}</div>
                     <div className='operacines__btn' onClick={() => modificarSeguro(true)}>+</div>
                 </div>
                 <div className="seguro__separador mobile"></div>
