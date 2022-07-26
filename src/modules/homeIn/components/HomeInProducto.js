@@ -1,5 +1,4 @@
 import React from 'react'
-import { useNavigate } from 'react-router-dom'
 import '../styles/homeInProducto.css'
 import '../styles/switch.css'
 import HomeInProductoBienvenida from './HomeInProductoBienvenida'
@@ -8,7 +7,7 @@ import HomeInProductoSeguro from './HomeInProductoSeguro'
 
 const HomeInProducto = () => {
 
-    const {navigate} = useNavigate()
+    // const {navigate} = useNavigate()
     const gotoHome = () => {
         // navigate('/')
     }
