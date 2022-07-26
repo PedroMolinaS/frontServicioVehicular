@@ -1,13 +1,13 @@
 import React, { useContext, useState } from 'react'
 import AuthContext from '../../../context/auth/authContext'
+import { dataPrecios } from '../../helpers/data'
 import { formateaMonedaSinDecimal } from '../../helpers/formateaMoneda'
 import HomeInProductoCovertura from './HomeInProductoCovertura'
 
-const dataPrecios = { min: 12500, max: 16500, limite: 16000, llanta: 15, choque: 20, atropello: 50 }
 
 const HomeInProductoSeguro = () => {
 
-    const {globalActualizaSeguro, globalSeguro} = useContext(AuthContext)
+    const { globalActualizaSeguro, globalSeguro } = useContext(AuthContext)
     const [coverturaMonto, setCoverturaMonto] = useState(dataPrecios.min)
     const [covertura, setCovertura] = useState({
         choque: true,
@@ -15,6 +15,7 @@ const HomeInProductoSeguro = () => {
         llanta: true
     })
 
+    // Agregro montos en grupos de 100:
     const modificarSeguro = (suma) => {
         const valor = suma ? 100 : -100
         if (!(coverturaMonto + valor < dataPrecios.min || coverturaMonto + valor > dataPrecios.max)) {
@@ -27,6 +28,7 @@ const HomeInProductoSeguro = () => {
         }
     }
 
+    // Actualizo el monto Final según la selección de coberturas:
     const actualizarCovertura = (texto, activo) => {
 
         if (texto.includes('Llanta')) {
@@ -65,6 +67,8 @@ const HomeInProductoSeguro = () => {
                     <h3 className=''>PROTEGE A LOS QUE TE RODEAN</h3>
                     <h3 className=''>MEJORA TU PLAN</h3>
                 </div>
+
+                {/* COMPONENTE REUTILIZABLE DE COVERTURAS SEGUN TIPO DE SERVICIO */}
 
                 <HomeInProductoCovertura
                     imagen={"/assets/img/homeIn/ico_choque.png"}

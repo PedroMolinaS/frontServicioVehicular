@@ -16,9 +16,8 @@ const useFormValidator = () => {
         let item = ''
         let result = ''
 
-
+        // ENCUENTRO EL TIPO DE VALIDACION QUE CORRESPONDE A DATO ENVIADO
         item = controlFormLogin.find(i => i.campo === data[0])
-
 
         if (item.regex === '') {
             result = data[1]

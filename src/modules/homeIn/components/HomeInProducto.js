@@ -7,16 +7,11 @@ import HomeInProductoSeguro from './HomeInProductoSeguro'
 
 const HomeInProducto = () => {
 
-    // const {navigate} = useNavigate()
-    const gotoHome = () => {
-        // navigate('/')
-    }
-
     return (
         <div className='producto'>
 
             <div className="desktop">
-                <div className="producto__volver" onClick={gotoHome}>
+                <div className="producto__volver">
                     <p className='volver__icono'>{'<'}</p>
                     <p className='volver__text'>VOLVER</p>
                 </div>

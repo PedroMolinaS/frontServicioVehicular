@@ -10,3 +10,12 @@ export const dataSeguro = {
     choque: 0,
     atropello: 0
 }
+
+export const dataPrecios = { 
+  min: 12500, 
+  max: 16500, 
+  limite: 16000, 
+  llanta: 15, 
+  choque: 20, 
+  atropello: 50 
+}
