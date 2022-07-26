@@ -5,6 +5,7 @@ import AuthReducer from './authReducer'
 
 const AuthState = (props) => {
 
+
     const [state, dispatch] = useReducer(AuthReducer, {
         globalUser: {
             userName: '',
@@ -37,6 +38,7 @@ const AuthState = (props) => {
 
     const globalIniciarPostSesion = (nombre, placa, token) => {
 
+        console.log('paso x')
         dispatch({
             action: 'INICIAR_POST_SESION',
             data: {nombre, placa, token}

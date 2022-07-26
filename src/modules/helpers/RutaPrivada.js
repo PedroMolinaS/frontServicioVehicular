@@ -1,10 +1,9 @@
-import React, { useContext } from 'react'
-import AuthContext from '../../context/auth/authContext'
 import { Navigate } from 'react-router-dom'
+import useAuth from '../hooks/useAuth'
 
 const RutaPrivada = ({ children }) => {
 
-  const { globalAuthenticate } = useContext(AuthContext)
+  const { globalAuthenticate } = useAuth()
 
   return globalAuthenticate
     ? children
