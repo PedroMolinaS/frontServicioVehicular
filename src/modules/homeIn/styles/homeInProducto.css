@@ -105,6 +105,7 @@
     font-size: 2.6rem;
     padding: .5rem 1.5rem;
     cursor: pointer;
+    user-select: none;
 }
 .seguro__separador{
     margin-top: 2rem;
@@ -205,6 +206,11 @@
     width: 3rem;
     text-align: center;
 }
+.detalle__accion-btn:hover{
+    background-color: var(--blue);
+    color: #fff;
+}
+
 .detalle__accion-text{
     font-size: 1.2rem;
     font-weight: 700;

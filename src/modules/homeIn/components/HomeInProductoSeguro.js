@@ -1,6 +1,5 @@
 import React, { useContext, useState } from 'react'
 import AuthContext from '../../../context/auth/authContext'
-import { dataSeguro } from '../../helpers/data'
 import HomeInProductoCovertura from './HomeInProductoCovertura'
 
 const dataPrecios = { min: 12500, max: 16500, limite: 16000, llanta: 15, choque: 20, atropello: 50 }
@@ -14,7 +13,6 @@ const HomeInProductoSeguro = () => {
         atropello: true,
         llanta: true
     })
-    // const [seguro, setSeguro] = useState(dataSeguro)
 
     const modificarSeguro = (suma) => {
         const valor = suma ? 100 : -100

@@ -1,4 +1,8 @@
-
+.cobertura__switch i{
+  font-size: 1.8rem;
+  color: var(--red);
+  cursor: pointer;
+}
 
 .switch {
     position: relative;

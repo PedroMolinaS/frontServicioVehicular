@@ -5,6 +5,7 @@ import HomeInResumen from '../components/HomeInResumen'
 import '../styles/homeIn.css'
 
 const HomeInScreen = () => {
+
   return (
     <div className='homein__container'>
       <HomeInFlujo />
